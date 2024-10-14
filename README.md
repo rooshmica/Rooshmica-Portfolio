@@ -9,7 +9,7 @@ I'm a software engineer with 5+ years of experience specializing in Full Stack D
 - **Cloud:** Azure
 
 ## 📈 GitHub Stats
-![Your GitHub stats](https://github-readme-stats.vercel.app/api?Rooshmica=your-username&show_icons=true&theme=radical)
+![Your GitHub stats](https://github-readme-stats.vercel.app/api?username=Rooshmica&show_icons=true&theme=radical)
 
 ## 📫 How to reach me:
 - [LinkedIn](https://www.linkedin.com/in/rooshmica-ramesh-76ba9a84)
