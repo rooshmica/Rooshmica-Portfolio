@@ -1,4 +1,4 @@
-# Hi there, I'm Rooshmica 👋
+# Hi There, I'm Rooshmica 👋
 
 I'm a software engineer with 5+ years of experience specializing in Full Stack Development, Cloud Computing, and DevOps. I'm passionate about building high-quality applications and collaborating on meaningful projects.
 
