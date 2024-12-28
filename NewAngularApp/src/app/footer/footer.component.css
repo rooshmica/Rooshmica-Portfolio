@@ -1,0 +1,80 @@
+/* Footer Styling */
+.footer-div {
+    background-color: #1a237e;  
+    padding: 1.5rem 2rem;
+    text-align: center;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    opacity: 0;
+    animation: fadeInFooter 1s ease-in-out forwards, bounceFooter 1s ease-in-out 1s;
+  }
+  
+  /* Fade-in Animation */
+  @keyframes fadeInFooter {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Bounce Effect */
+  @keyframes bounceFooter {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  /* Footer Text Styling */
+  .footer-text {
+    font-size: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+    color: #fff;
+  }
+  
+  .footer-text::before {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #ff6600;
+    margin-right: 10px;
+    animation: slideInHeart 1.2s ease-in-out forwards;
+  }
+  
+  @keyframes slideInHeart {
+    from {
+      width: 0;
+      height: 0;
+      opacity: 0;
+      transform: scale(0);
+    }
+    to {
+      width: 10px;
+      height: 10px;
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Responsive Footer for Small Screens */
+  @media (max-width: 768px) {
+    .footer-div {
+      padding: 1rem;
+    }
+  
+    .footer-text {
+      font-size: 0.9rem;
+    }
+  }
+  

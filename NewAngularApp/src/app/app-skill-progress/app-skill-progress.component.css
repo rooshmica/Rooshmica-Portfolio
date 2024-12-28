@@ -1,0 +1,125 @@
+/* Skills Container */
+.skills-container {
+    display: flex;
+    width: 90%;
+    padding: 20px 10px;
+    margin: 0 auto;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  /* Grid Layout for Skills */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    width: 100%;
+    padding: 10px;
+  }
+  
+  /* Individual Skill */
+  .skill {
+    text-align: center;
+    line-height: 1.5;
+  }
+  
+  /* Meter Style */
+  .meter {
+    height: 20px;
+    position: relative;
+    background: rgb(243, 239, 239);
+    border-radius: 25px;
+    overflow: hidden;
+    margin: 10px 0;
+  }
+  
+  .meter > span {
+    display: block;
+    height: 100%;
+    border-radius: 25px;
+    background-color: #a1bcd8;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Skills Image */
+  .skills-image > img {
+    margin-left: 80px;
+    max-width: 90%;
+    height: auto;
+  }
+  
+  /* Skills Heading */
+  .skills-heading {
+    font-weight: 400;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1456px) {
+    .skills-container {
+      flex-direction: column;
+    }
+    .skills-image {
+      display: none;
+      order: 2;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .skills-grid {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 15px;
+    }
+    .skills-image {
+      display: none;
+      order: 2;
+    }
+  }
+  
+  /* Animations */
+  @keyframes fade_down {
+    0% {
+      opacity: 0.01;
+      transform: translateY(-40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+  
+  @keyframes fade_up {
+    0% {
+      opacity: 0.01;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+  
+  @keyframes fade_right {
+    0% {
+      opacity: 0.01;
+      transform: translateX(40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+  
+  @keyframes fade_left {
+    0% {
+      opacity: 0.01;
+      transform: translateX(-40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+  
