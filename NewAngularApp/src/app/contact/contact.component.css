@@ -1,0 +1,122 @@
+.contact-div-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(0, 18, 25);
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  animation: fadeInContact 1s ease-in-out forwards;
+}
+
+/* Fade-in Animation */
+@keyframes fadeInContact {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Contact Title */
+.contact-title {
+  font-size: 35px;
+  font-weight: 700;
+  color: #1d5be1;
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(29, 91, 225, 0.4);
+  animation: fadeInText 1.5s ease-in-out forwards;
+}
+
+/* Subtitle */
+.contact-subtitle {
+  line-height: 2.2;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 500;
+  color: #f7f7f7;
+  letter-spacing: 1px;
+  margin-top: 0.5rem;
+  text-align: center;
+  animation: fadeInText 1.8s ease-in-out forwards;
+}
+.contact-detail
+{
+  margin-left: 200px;
+}
+.contact-detail-email
+{
+  margin-left: 200px;
+}
+/* Contact Links */
+.contact-detail,
+.contact-detail-email {
+
+  /* margin-left: 220px; */
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 8px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #1d5be1, #05ec20);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid transparent;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+/* Hover Effect with Neon Glow */
+.contact-detail:hover,
+.contact-detail-email:hover {
+  background: linear-gradient(135deg, #1d5be1, #05ec20);
+  color: white;
+  border: 2px solid #fff;
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255, 87, 34, 0.5);
+}
+
+/* Icon Styles */
+.contact-detail i,
+.contact-detail-email i {
+  font-size: 22px;
+  margin-right: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Icon Bounce Effect on Hover */
+.contact-detail:hover i,
+.contact-detail-email:hover i {
+  transform: scale(1.);
+}
+
+/* Responsive Contact Section */
+@media (max-width: 768px) {
+  .contact-div-main {
+    padding: 1.5rem;
+  }
+
+
+  .contact-subtitle {
+    font-size: 12px;
+  }
+
+  .contact-detail,
+  .contact-detail-email {
+    font-size: 18px;
+    padding: 10px 15px;
+  }
+
+  .contact-detail i,
+  .contact-detail-email i {
+    font-size: 18px;
+  }
+}

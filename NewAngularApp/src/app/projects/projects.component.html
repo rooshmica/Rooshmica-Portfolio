@@ -1,1 +1,33 @@
-<p>projects works!</p>
+<div class="main" id="projects" wmAnimate="landing" aos speed="faster">
+  <h3 class="project-title">My Github Repositories 📂</h3>
+
+  <!-- Repository Cards -->
+  <div class="repo-cards-div-main">
+    <div *ngFor="let project of projects" class="repo-card">
+      <a [href]="project.html_url" target="_blank" class="repo-link">
+        <i class="fas fa-external-link-alt"></i> View Repository
+      </a>
+      
+      <h3>{{ project.name }}</h3>
+      <p>{{ project.description || 'No description available' }}</p> 
+      <div class="repo-details">
+        <span *ngIf="project.language" class="repo-language">
+          <i class="language-color" [style.background]="project.language.color"></i>
+          
+        </span>
+        <div *ngIf="project.topics?.length" class="repo-topics">
+          <span *ngFor="let topic of project.topics" class="repo-topic">
+            {{ topic }}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- View More Projects -->
+  <div class="project-button">
+    <a class="main-button" href="https://github.com/{{ user }}" target="_blank">
+      More Projects
+    </a>
+  </div>
+</div>

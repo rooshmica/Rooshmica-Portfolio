@@ -1,80 +1,125 @@
-/* Footer Styling */
 .footer-div {
-    background-color: #1a237e;  
-    padding: 1.5rem 2rem;
-    text-align: center;
-    color: white;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+  background-color: rgb(0, 18, 25);
+  padding: 1.5rem 2rem;
+  text-align: center;
+  color: white;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  opacity: 0;
+  animation: fadeInFooter 1s ease-in-out forwards, bounceFooter 1s ease-in-out 1s;
+}
+
+/* Fade-in Animation */
+@keyframes fadeInFooter {
+  from {
     opacity: 0;
-    animation: fadeInFooter 1s ease-in-out forwards, bounceFooter 1s ease-in-out 1s;
+    transform: translateY(30px);
   }
-  
-  /* Fade-in Animation */
-  @keyframes fadeInFooter {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  /* Bounce Effect */
-  @keyframes bounceFooter {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
+}
+
+/* Bounce Effect */
+@keyframes bounceFooter {
+  0%, 100% {
+    transform: translateY(0);
   }
-  
-  /* Footer Text Styling */
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Animated Footer Title */
+.footer-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  opacity: 0;
+  animation: fadeInTitle 1.5s ease-in-out 1s forwards;
+}
+
+/* Title Animation */
+@keyframes fadeInTitle {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Angular Logo Animation */
+.angular-logo {
+  height: 50px;
+  width: 50px;
+  vertical-align: middle;
+  animation: rotateLogo 3s linear infinite;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Angular Logo Rotation */
+@keyframes rotateLogo {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Hover effect to pause rotation */
+.angular-logo:hover {
+  animation-play-state: paused;
+  transform: scale(1.1);
+}
+
+/* Footer Text Styling */
+.footer-text {
+  font-size: 1rem;
+  font-family: 'Courier New', Courier, monospace;
+  color: #fff;
+  margin-top: 10px;
+  animation: fadeInText 2s ease-in-out 1.5s forwards;
+  opacity: 0;
+}
+
+/* Footer Text Animation */
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Footer for Small Screens */
+@media (max-width: 768px) {
+  .footer-div {
+    padding: 1rem;
+  }
+
+  .footer-title {
+    font-size: 1.4rem;
+  }
+
   .footer-text {
-    font-size: 1rem;
-    font-family: 'Courier New', Courier, monospace;
-    color: #fff;
+    font-size: 0.9rem;
   }
-  
-  .footer-text::before {
-    content: '';
-    display: inline-block;
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 10px solid #ff6600;
-    margin-right: 10px;
-    animation: slideInHeart 1.2s ease-in-out forwards;
+
+  .angular-logo {
+    height: 40px;
+    width: 40px;
   }
-  
-  @keyframes slideInHeart {
-    from {
-      width: 0;
-      height: 0;
-      opacity: 0;
-      transform: scale(0);
-    }
-    to {
-      width: 10px;
-      height: 10px;
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-  
-  /* Responsive Footer for Small Screens */
-  @media (max-width: 768px) {
-    .footer-div {
-      padding: 1rem;
-    }
-  
-    .footer-text {
-      font-size: 0.9rem;
-    }
-  }
-  
+}

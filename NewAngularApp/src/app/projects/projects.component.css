@@ -1,0 +1,180 @@
+.github-calendar {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  display: block;
+}
+
+.project-title {
+  text-align: center;
+  /* background-color: #1c2834; */
+  background: linear-gradient(90deg, #a041cd, #05497c);
+  color: #ffffff; /* White text for contrast */
+  font-size: 2.0rem;
+  font-weight: 700;
+  padding: 5px 5px;
+  border-radius: 12px;
+  margin: 20px auto;
+  width: fit-content;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Main container for all repo cards */
+.repo-cards-div-main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 40px auto;
+}
+
+/* Individual repo card */
+.repo-card {
+  background: #1c2834; /* Dark navy background */
+  border-radius: 12px;
+  padding: 20px;
+  width: 320px;
+  height: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #ffffff; /* White text for readability */
+}
+
+/* Hover effects for repo cards */
+.repo-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Repository link at the top */
+.repo-link {
+  font-size: 0.9rem;
+  color: #00b4d8; /* Light blue link */
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: inline-block;
+  transition: color 0.2s ease;
+  text-align: center;
+}
+
+.repo-link:hover {
+  color: #0077b6; /* Darker blue on hover */
+  text-decoration: underline;
+}
+
+/* Title of the repository */
+.repo-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff; /* White text for contrast */
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  border-radius: 6px;
+}
+
+/* Repository details (language, stars, forks) */
+.repo-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #b0bec5; /* Light gray text */
+  padding: 10px 0;
+}
+
+/* Language styling */
+.repo-language {
+  display: flex;
+  align-items: center;
+}
+
+.language-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+/* Stars and forks */
+.repo-stars,
+.repo-forks {
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .repo-card {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .repo-card h3 {
+    font-size: 1rem;
+  }
+
+  .repo-details {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .repo-stars,
+  .repo-forks {
+    font-size: 0.8rem;
+  }
+}
+
+/* Styles for "More Projects" button */
+.project-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.main-button {
+  background-color: #0077b6;
+  border: 1px solid #0077b6;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 10px 10px;
+  text-transform: uppercase;
+  border-radius: 6px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out 0s;
+  display: inline-block;
+}
+
+.main-button:hover {
+  background-color: #00b4d8;
+  border-color: #00b4d8;
+}
+
+/* Styles for repository topics */
+.repo-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.repo-topic {
+  background-color: #0077b6; /* Blue background for topics */
+  color: #ffffff; /* White text for contrast */
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 12px;
+  text-transform: capitalize; /* Capitalize topic names */
+}

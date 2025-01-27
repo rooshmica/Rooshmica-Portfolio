@@ -1,18 +1,43 @@
-
 <div class="main" id="skills">
-    <div class="skills-main-div">
-        <div class="skills-image-div" wmAnimate="fadeInRight" aos speed="normal">
-          <img alt="Sarthak Working" src="../../assets/images/Coder.svg" class="skills-image-div">
-        </div>
-        <div class="skills-text-div" wmAnimate="fadeInLeft" aos speed="normal">
-          <h1 class="skills-heading">{{skillsSection.title}}</h1>
-          <p class="subTitle skills-text-subtitle">{{skillsSection.subTitle}}
-            <app-software-skill></app-software-skill>
-          <div *ngFor="let skill of skillsSection.skills">
-            <p class="subTitle skills-text">{{skill}}</p>
-          </div>
-        </div>
-  <!--    </Fade>-->
+  <div class="skills-main-div">
+    <div class="skills-image-div" wmAnimate="fadeInRight" aos speed="normal">
+      <img alt="Sarthak Working" src="../../assets/images/Coder.svg" class="skills-image-div">
     </div>
+   
+    <div class="skills-text-div" wmAnimate="fadeInLeft" aos speed="normal">
+      <h1 class="skills-heading">{{ skillsSection.title }}</h1>
+      <p class="subTitle skills-text-subtitle">{{ skillsSection.subTitle }}</p>
+      <app-software-skill></app-software-skill>
+      <!-- Loop through the skills sections -->
+      <div *ngFor="let section of skillsSection.skills">
+        <h3 class="skills-section-title">{{ section.heading }}</h3>
+
+        <!-- Loop through subSkills (which could be either a string or an object) -->
+        <div *ngFor="let subSkill of section.subSkills">
+          
+          <!-- If the subSkill is an object with a title, display title and description -->
+          <div *ngIf="isObjectWithTitle(subSkill)">
+            <h4 class="skills-subsection-title">{{ subSkill.title }}</h4>
+            <ul class="skills-subsection-list">
+              <li *ngFor="let desc of subSkill.description" class="skills-description">{{ desc }}</li>
+            </ul>
+          </div>
+
+          <!-- If the subSkill is just a string, display it as is -->
+          <p *ngIf="!isObjectWithTitle(subSkill)" class="skills-description">{{ subSkill }}</p>
+        </div>
+      </div>
+    
+   
+    </div>
+
+         <!-- Animated Background -->
+         <div class="animated-background">
+          <div class="particle" style="top: 10%; left: 15%; animation-delay: 0s;"></div>
+          <div class="particle" style="top: 25%; left: 40%; animation-delay: 1s;"></div>
+          <div class="particle" style="top: 50%; left: 70%; animation-delay: 2s;"></div>
+          <div class="particle" style="top: 75%; left: 20%; animation-delay: 3s;"></div>
+          <div class="particle" style="top: 85%; left: 90%; animation-delay: 4s;"></div>
+        </div>
   </div>
-  
+</div>

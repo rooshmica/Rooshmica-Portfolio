@@ -1,0 +1,25 @@
+<div class="main contact-margin-top" id="contact" wmAnimate="jackInTheBox" aos speed="normal">
+  <div class="contact-div-main">
+    <div class="contact-header">
+      <h4 class="heading contact-title">{{contactInfo.title}}</h4>
+      <h3 class="subTitle contact-subtitle">
+        <span *ngFor="let line of contactInfo.subtitle">
+          {{ line }} <br>
+        </span>
+      </h3>
+      <div class="contact-text-div">
+        <a class="contact-detail" href="{{'tel:'+ contactInfo.number}}">
+          <i class="fas fa-phone-alt"></i> {{contactInfo.number}}
+        </a>
+        
+        <a class="contact-detail-email" href="{{'mailto:' + contactInfo.email_address}}">
+          <i class="fas fa-envelope"></i> {{contactInfo.email_address}}
+        </a>
+      <br><br>
+        <a class="contact-social-media">
+          <app-social-media></app-social-media>
+        </a>
+      </div>
+    </div>  
+  </div>
+</div>

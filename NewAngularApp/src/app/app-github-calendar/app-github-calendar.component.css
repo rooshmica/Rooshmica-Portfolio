@@ -1,0 +1,59 @@
+.github-calendar {
+  width: 100%;
+  max-width: 900px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+
+h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.months {
+  display: grid;
+  grid-template-columns: repeat(53, 1fr); /* Align with 52 weeks */
+  margin-bottom: 5px;
+}
+
+.month-label {
+  grid-column: span 4; /* Adjust span to fit months proportionally */
+  text-align: left;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.calendar-container {
+  display: grid;
+  grid-template-columns: repeat(53, 1fr); /* 52 weeks + padding */
+  grid-gap: 2px;
+}
+
+.day-box {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  background-color: #ebedf0; /* Default for no contributions */
+  transition: background-color 0.3s ease;
+}
+
+.day-box[data-contribution-level="1"] {
+  background-color: #c6e48b;
+}
+
+.day-box[data-contribution-level="2"] {
+  background-color: #7bc96f;
+}
+
+.day-box[data-contribution-level="3"] {
+  background-color: #239a3b;
+}
+
+.day-box[data-contribution-level="4"] {
+  background-color: #196127;
+}
+
+.day-box[data-contribution-level="5"] {
+  background-color: #0d4f20;
+}

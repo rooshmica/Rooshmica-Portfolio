@@ -1,60 +1,260 @@
-.subTitle {
-    color: #868e96;
+/* Main container for the skills section */
+#skills {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0;
+  background-color: rgb(0, 18, 25); 
+  min-height: 100vh; 
+  width: 100vw; 
+  box-sizing: border-box; 
+  flex-wrap: wrap; 
+  gap: 20px; 
+  
+}
+
+/* Main skills section card */
+.skills-main-div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 100%;
+  width: 100%; /* Full width for the card */
+  background-color: rgb(0, 18, 25); /* Dark blue-green color */
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  padding: 40px;
+  gap: 20px; /* Space between child elements */
+
+}
+
+.skills-main-div:hover {
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2); /* Slightly larger shadow on hover */
+}
+
+/* Styling for the skills image */
+.skills-image-div {
+  flex: 0 0 30%; /* Take 30% of the container width */
+  max-width: 400px; /* Cap the max width for larger screens */
+  height: auto; /* Adjust height based on width */
+  object-fit: contain;
+  margin: 0 auto; /* Center the image in its flex column */
+  /* border: 5px solid #f0f0f0; */
+}
+
+.skills-image-div:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+/* Section for text content */
+.skills-text-div {
+  flex: 1; /* Take up the remaining space */
+  max-width: 65%; /* Ensure it doesn’t grow too large */
+  padding: 20px;
+}
+
+/* Title and Subtitle */
+.skills-heading {
+  font-size: 2.0rem;
+  font-weight: bold;
+  color: #ffffff;
+  background: linear-gradient(90deg, #8cdcf4, #a45cd4, #5166c5);
+  text-align: left;
+  padding: 5px 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 1px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+
+.skills-text-subtitle {
+  font-size: 1.5rem;
+  color: #00bfff;
+  text-align: left; /* Align to the left */
+  margin-bottom: 30px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+/* Styling for the skills section */
+.skills-section-title {
+  font-size: 2rem;
+  color: #00bfff;
+  margin-top: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: left; /* Align to the left */
+  letter-spacing: 1.5px;
+  position: relative;
+}
+
+.skills-section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background-color: #00bfff;/*#27ae60;*/
+  
+}
+
+.skills-section-title:hover::after {
+  width: 100px; /* Expand underline on hover */
+}
+
+.skills-subsection-title {
+  font-size: 1.8rem;
+  color: #00bfff;
+  margin-top: 20px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+/* Improved list and descriptions */
+.skills-subsection-list {
+  list-style: square inside;
+  padding: 0;
+  margin: 0;
+}
+
+.skills-description {
+  font-size: 1.2rem;
+  color: #adb7a7;
+  margin: 10px 0;
+  line-height: 1.8;
+  font-family: 'Arial', sans-serif;
+  font-weight: 400;
+}
+
+.skills-description p {
+  margin: 12px 0;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+/* Hover effects for subsections */
+.skills-subsection-list li:hover {
+  color: #0165fb;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out, transform 0.2s ease;
+  transform: translateX(5px);
+}
+
+.skills-description:hover {
+  color: #0165fb;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out, background 0.3s ease;
+  background-color: #f0f0f0;
+  padding-left: 10px;
+}
+
+/* Button for more interactivity */
+.skills-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #0165fb;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  text-align: center;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+
+.skills-button:hover {
+  background-color: #2ecc71;
+  transform: scale(1.05);
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  #skills {
+    flex-direction: column;
+    align-items: center; /* Center align for smaller screens */
+    padding: 20px;
   }
+
   .skills-main-div {
-    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
   }
+
+  .skills-image-div {
+    width: 100%;
+    max-width: 300px; /* Resize image for smaller screens */
+    margin: 0 auto 20px auto;
+  }
+
   .skills-text-div {
-    margin-left: 50px;
-  }
-  
-  .skills-main-div > * {
-    flex: 1;
-    margin-bottom: 30px;
-  }
-  
-  .skills-image-div > img {
     max-width: 100%;
-    height: auto;
+    padding: 10px;
   }
-  
-  .skills-heading {
-    font-size: 56px;
-    font-weight: 400;
+
+  .skills-text-subtitle {
+    font-size: 1.3rem;
   }
-  
-  /* Media Query */
-  @media (max-width: 1380px) {
-    .skills-heading {
-      font-size: 40px;
-    }
+
+  .skills-section-title {
+    font-size: 1.8rem;
   }
-  @media (max-width: 768px) {
-    .skills-heading {
-      font-size: 30px;
-      text-align: center;
-    }
-    .greeting-text-p {
-      font-size: 16px;
-      line-height: normal;
-    }
-    .skills-main-div {
-      flex-direction: column
-    }
-    .skills-text-div {
-      margin-left: 0px;
-      margin: 20px;
-    }
-    .skills-text {
-      font-size: 16px;
-    }
-    .skills-text-subtitle {
-      font-size: 16px;
-      text-align: center;
-    }
-    .skills-image-div {
-      /* display: none; */
-      order: 2;
-    }
+
+  .skills-subsection-title {
+    font-size: 1.4rem;
   }
-  
+
+  .skills-description {
+    font-size: 1rem;
+  }
+}
+
+
+/* Animated Background */
+.animated-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* Particle Animation */
+.particle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: rgba(200, 200, 200, 0.5);
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: float 10s infinite ease-in-out alternate;
+  -webkit-animation: float 10s infinite ease-in-out alternate;
+
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-300px) translateX(50px) scale(1.2);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(0) translateX(-50px) scale(1);
+    opacity: 0.6;
+  }
+}
+

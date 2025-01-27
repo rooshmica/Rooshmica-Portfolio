@@ -12,7 +12,21 @@ import { SoftwareSkillComponent } from './skills/software-skill/software-skill.c
 import { EducationComponent } from './education/education.component';
 import { AppSkillProgressComponent } from './app-skill-progress/app-skill-progress.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { AppGithubCalendarComponent } from './app-github-calendar/app-github-calendar.component';
+import { GithubRepoCardComponent } from './projects/github-repo-card/github-repo-card.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ExperienceComponent } from './experience/experience.component';
+import { ExperienceCardComponent } from './experience/experience-card/experience-card.component';
+import { ContactComponent } from './contact/contact.component';
+
 @NgModule({
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    ExperienceComponent,
+    ExperienceCardComponent,
+  ],
   declarations: [
     AppComponent,
     HeaderComponent,
@@ -23,13 +37,12 @@ import { ProjectsComponent } from './projects/projects.component';
     SoftwareSkillComponent,
     EducationComponent,
     AppSkillProgressComponent,
-    ProjectsComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
+    ProjectsComponent,
+    AppGithubCalendarComponent,
+    GithubRepoCardComponent,
+    ContactComponent
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

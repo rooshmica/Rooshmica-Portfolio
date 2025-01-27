@@ -1,0 +1,27 @@
+<div *ngIf="workExperiences.viewExperiences">
+  <div id="experience">
+    <div class="experience-container" id="workExperience">
+      <div>
+        <h1 class="experience-heading">Experiences</h1>
+        <div class="experience-cards-div">
+          <app-experience-card 
+            *ngFor="let card of workExperiences.experience" 
+            [experience]="card"
+            (viewRole)="toggleDetails($event)">
+          </app-experience-card>
+        </div>          
+      </div>
+
+    <!-- Section to display the selected experience details BELOW the cards -->
+    <div *ngIf="selectedExperience" class="experience-details">
+      <h2>{{ selectedExperience.role }} at {{ selectedExperience.company }}</h2>
+      <ul class="responsibilities-list">
+        <li *ngFor="let point of selectedExperience.descBullets">
+          <i class="fas fa-bolt icon"></i> {{ point }}
+        </li>
+      </ul>
+    </div>
+
+    </div>
+  </div>
+</div>

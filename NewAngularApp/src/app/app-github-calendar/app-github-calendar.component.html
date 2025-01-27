@@ -1,0 +1,17 @@
+<div class="github-calendar">
+  <h3>{{ username }}'s GitHub Contribution Chart</h3>
+
+  <!-- Month Labels -->
+  <div class="months">
+    <div *ngFor="let month of monthLabels" class="month-label">
+      {{ month }}
+    </div>
+  </div>
+
+  <!-- Calendar Grid -->
+  <div class="calendar-container">
+    <div *ngFor="let day of contributions" class="day-box"
+         [attr.data-contribution-level]="day.contributionLevel">
+    </div>
+  </div>
+</div>

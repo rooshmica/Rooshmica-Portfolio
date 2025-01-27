@@ -1,23 +1,28 @@
 /* Header General Styling */
 .header {
-    position: sticky;
-    top: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #1a237e;
-    padding: 1rem 2rem;
-    z-index: 1000;
-    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out, transform 0.3s ease-in-out;
-  }
-  
-  /* Shrink Header on Scroll */
-  .header.scrolled {
-    background-color: #222;
-    padding: 0.5rem 2rem;
-    transform: translateY(-10px);
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%; /* Use full width dynamically */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(0, 18, 25); /* Dark blue-green color */
+  padding: 1rem 2rem;
+  z-index: 1000;
+  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out, transform 0.3s ease-in-out;
+  box-sizing: border-box; /* Include padding in width */
+}
+
+/* Shrink Header on Scroll */
+.header.scrolled {
+  background-color: rgb(0, 18, 25);
+  padding: 0.5rem 2rem;
+  transform: translateY(-10px);
+}
+
   
   /* Logo Animation */
   .logo {
@@ -139,5 +144,24 @@
     .navicon:hover {
       background-color: #ff6600;
     }
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff; /* Adjust color as needed */
+  }
+  
+  .logo-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 10px; /* Space between username and icon */
+  }
+  
+  .logo-icon {
+    width: 50px; /* Adjust size as needed */
+    height: 50px;
+    border-radius: 50%; /* Optional if you want a circular crop */
   }
   

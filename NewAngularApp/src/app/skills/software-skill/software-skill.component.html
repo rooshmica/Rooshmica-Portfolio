@@ -1,13 +1,10 @@
 <div>
-    <div class="software-skills-main-div">
-      <ul class="dev-icons">
-        <li class="software-skill-inline" *ngFor="let skills of skillsSection.softwareSkills">
-  <!--        <i class=skills.fontAwesomeclass>skills.fontAwesomeclass</i>-->
-          <i [class]=skills.fontAwesomeClassname></i>
-          <p>{{skills.skillName}}</p>
-        </li>
-      </ul>
-    </div>
+  <div class="software-skills-main-div">
+    <ul class="dev-icons">
+      <li class="software-skill-inline" *ngFor="let skill of skillsSection.softwareSkills">
+        <i [class]="skill.fontAwesomeClassname" [ngStyle]="{'color': skill.color}"></i>
+        <p>{{ skill.skillName }}</p>
+      </li>
+    </ul>
   </div>
-  
-  
+</div>

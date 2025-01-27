@@ -1,230 +1,367 @@
 .main {
-    width: 90%;
-    padding: 20px 10px;
-    margin: 0px auto;
-    margin-top: 4rem;
+  width: 90%;
+  padding: 20px 10px;
+  margin: 0px auto;
+  margin-top: 4rem;
+}
+.wave-emoji {
+  animation: waveInfinite 1.8s infinite;
+}
+.fade-in-out-text {
+  animation: fadeInOut 5s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
   }
-  .greet-main {
-    width: 90%;
-    padding: 20px 10px;
-    margin: 0px auto;
-    margin-top: 2rem;
-   
+  50% {
+    opacity: 1;
   }
-  
-  
-  .gretting-main {
-    width: 90%;
-    padding: 20px 10px;
-    margin: 0px auto;
+}
+
+@keyframes waveInfinite {
+  0% { transform: rotate(0deg); }
+  15% { transform: rotate(-20deg); }
+  30% { transform: rotate(10deg); }
+  45% { transform: rotate(-10deg); }
+  60% { transform: rotate(5deg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.typing-title {
+  display: inline-block;
+  font-size: 70px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #d6d6d6; /* Matches the text color */
+  animation: typingLoop 6s steps(40, end) infinite;
+  color: #d6d6d6; /* Apply white-grey color to typing text */
+}
+
+@keyframes typingLoop {
+  0%, 50% {
+    width: 100%;
   }
-  
-  .greeting-main {
-    display: flex;
+  55%, 100% {
+    width: 100;
   }
-  
-  .greeting-main > * {
-    flex: 1;
-    margin-bottom: 30px;
+}
+
+
+
+.greet-main {
+  width: 1200px; /* Fixed width for consistent layout */
+  padding: 20px 10px;
+  margin: 0px auto;
+  margin-top: 4rem;
+  background-color: rgb(0, 18, 25);
+}
+
+.greeting-main {
+  display: flex;
+  width: 100%;
+  justify-content: space-between; /* Ensure alignment stays intact */
+}
+
+.button-greeting-div {
+  display: flex;
+  margin-top: 20px;
+}
+
+.greeting-text {
+  font-size: 60px; /* Fixed font size */
+  line-height: 1.2;
+  margin-top: 1rem;
+  color: #d6d6d6; /* Matches text color */
+}
+
+.greeting-text-p {
+  font-size: 24px; /* Fixed font size */
+  line-height: 36px;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  color: #868e96;
+}
+
+.greeting-image-div {
+  width: 50%; /* Adjust based on your preference */
+  max-width: 600px; /* Ensure it doesn't get too large */
+  min-width: 300px; /* Prevent it from shrinking too much */
+  height: auto; /* Maintain aspect ratio */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding-right: 10px;
+  border-radius: 20px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+  animation: moveFrontBack 2s ease-in-out infinite;
+}
+
+.greeting-image-div > img:hover {
+  width: 100%; /* Fill the container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Make sure the image fills its container */
+  transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
+  transform: scale(1.1); /* Slight zoom effect */
+  filter: grayscale(30%);
+}
+
+/* .greeting-image-div > img {
+  max-width: 100%;
+  height: auto;
+  animation: moveFrontBack 2s ease-in-out infinite;
+} */
+
+.wave-emoji {
+  animation-duration: 1.8s;
+  animation-iteration-count: infinite;
+  animation-name: wave;
+  display: inline-block;
+  transform-origin: 70% 70%;
+}
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.subTitle {
+  color: #868e96;
+}
+
+/* Image Animation */
+@keyframes moveFrontBack {
+  0% {
+    transform: translateY(0);
   }
-  .button-greeting-div {
-    display: flex;
-    margin-top: 20px;
+  50% {
+    transform: translateY(15px);
   }
-  
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(-10deg);
+  }
+  20% {
+    transform: rotate(12deg);
+  }
+  30% {
+    transform: rotate(-10deg);
+  }
+  40% {
+    transform: rotate(9deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* Media Queries */
+@media (max-width: 1380px) {
   .greeting-text {
-    font-size: 70px;
-    line-height: 1.1;
-    margin-top: 1rem;
+    font-size: 50px;
   }
-  
+
   .greeting-text-p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .button-greeting-div {
+    justify-content: space-around;
+  }
+
+  .greeting-text {
     font-size: 30px;
-    line-height: 40px;
-  }
-  
-  .greeting-image-div > img {
-    max-width: 100%;
-    height: auto;
-  }
-  .wave-emoji {
-    animation-duration: 1.8s;
-    animation-iteration-count: infinite;
-    animation-name: wave;
-    display: inline-block;
-    transform-origin: 70% 70%;
-  }
-  p {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-  }
-  .subTitle {
-    color: #868e96;
-  }
-  @keyframes wave {
-    0% {
-      transform: rotate(0deg);
-    }
-    10% {
-      transform: rotate(-10deg);
-    }
-    20% {
-      transform: rotate(12deg);
-    }
-    30% {
-      transform: rotate(-10deg);
-    }
-    40% {
-      transform: rotate(9deg);
-    }
-    50% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(0deg);
-    }
-  }
-  
-  /* Media Query */
-  @media (max-width: 1380px) {
-    .greeting-text {
-      font-size: 50px;
-    }
-    .greeting-text-p {
-      font-size: 20px;
-    }
-  }
-  @media (max-width: 768px) {
-    .button-greeting-div {
-      justify-content: space-around;
-    }
-    .greeting-text {
-      font-size: 30px;
-      text-align: center;
-    }
-    .greeting-text-p {
-      font-size: 16px;
-      line-height: normal;
-      text-align: center;
-    }
-    .greeting-main {
-      display: block;
-    }
-  }
-  .main-button {
-    background-color: #55198b;
-    border: solid 1px #55198b;
-    color: white;
-    font-weight: 700;
-    width: max-content;
-    padding: 13px 22px;
-    margin-right: 50px;
-    text-transform: uppercase;
-    border-radius: 6px;
     text-align: center;
-    text-decoration: none;
-    display: block;
-    margin-top: 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: all .3s ease-in-out 0s;
   }
-  .main-button:hover {
-    background-color: #ffffff;
-    color: black;
-    transition: all .3s ease 0s;
-    transform: translateY(-3px);
-  }
-  .project-button{
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
+
   .greeting-text-p {
-    font-size: 22px;
-    line-height: 40px;
-    margin-top: 3rem;
-    margin-bottom: 2rem;
+    font-size: 16px;
+    line-height: normal;
+    text-align: center;
+  }
+
+  .greeting-main {
+    display: block;
+  }
+}
+
+.main-button {
+  background-color: #55198b;
+  border: solid 1px #55198b;
+  color: white;
+  font-weight: 700;
+  width: max-content;
+  padding: 13px 22px;
+  margin-right: 50px;
+  text-transform: uppercase;
+  border-radius: 6px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  margin-top: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.main-button:hover {
+  background-color: #ffffff;
+  color: black;
+  transition: all 0.3s ease 0s;
+  transform: translateY(-3px);
+}
+
+.project-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.greeting-text-p {
+  font-size: 22px;
+  line-height: 40px;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .main-button {
+    font-size: 15px;
+    padding: 12px 18px;
+    margin-right: 0px;
+  }
+
+  .greeting-text {
+    font-size: 35px;
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 320px) {
+  .main-button {
+    font-size: 12px;
+  }
+}
+
+/* Additional Animations */
+@keyframes fade_down {
+  0% {
+    opacity: 0.01;
+    transform: translateY(-20px);
+    transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1),
+      transform 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1),
+      transform 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+}
+
+@keyframes fade_up {
+  0% {
+    opacity: 0.01;
+    transform: translateY(20px);
+    transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1),
+      transform 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1),
+      transform 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+}
+
+@keyframes fade_right {
+  0% {
+    opacity: 0.01;
+    transform: translateX(20px);
+    transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1),
+      transform 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+    transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1),
+      transform 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+}
+
+@keyframes fade_left {
+  0% {
+    opacity: 0.01;
+    transform: translateX(-100px);
+    transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1),
+      transform 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+    transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1),
+      transform 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
   }
 
   
-  @media (max-width: 768px) {
-    .main-button {
-      font-size: 15px;
-      padding: 12px 18px;
-      margin-right: 0px;
-    }
-    .greeting-text{
-      font-size: 35px;
-      font-weight: 700;
-    }
+}
+
+
+/* Animated Background */
+.animated-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Keeps it behind content */
+}
+
+/* Particle Animation */
+.particle {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: rgba(200, 200, 200, 0.5);
+  border-radius: 50%;
+  animation: float 8s infinite ease-in-out;
+  opacity: 0.8;
+}
+
+/* Keyframe Animation for Particle Movement */
+@keyframes float {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.5;
   }
-  @media (max-width: 320px) {
-    .main-button {
-      font-size: 12px;
-    }
+  50% {
+    transform: translateY(-200px) scale(1.5);
+    opacity: 0.8;
   }
-  
-  
-  /* Animations */
-  @keyframes fade_down {
-    0% {
-      opacity: 0.01;
-      transform: translateY(-20px);
-      transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1),
-      transform 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0px);
-      transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1),
-      transform 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
-    }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.5;
   }
-  
-  @keyframes fade_up {
-    0% {
-      opacity: 0.01;
-      transform: translateY(20px);
-      transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1),
-      transform 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0px);
-      transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1),
-      transform 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
-    }
-  }
-  @keyframes fade_right {
-    0% {
-      opacity: 0.01;
-      transform: translateX(20px);
-      transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1),
-      transform 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0px);
-      transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1),
-      transform 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
-    }
-  }
-  @keyframes fade_left {
-    0% {
-      opacity: 0.01;
-      transform: translateX(-100px);
-      transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1),
-      transform 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0px);
-      transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1),
-      transform 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
-    }
-  }
-  
+}
+

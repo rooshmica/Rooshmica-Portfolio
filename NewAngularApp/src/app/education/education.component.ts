@@ -16,29 +16,29 @@ export class EducationComponent implements OnInit {
     //   className2: "prt_about_learnbox_right"
     // },
     {
-      heading: "B.E - Computer Science & Engineering",
-      duration: "2018",
-      subtitle: "Anna University, Chennai",
-      content: "Successfully completed my B.E in Computer science from Anna University, Chennai.",
-      className1: "mar-right",
-      className2: "prt_about_learnbox_left"
-    },
-    {
-      heading: "Higher Secondary(12th)",
-      duration: "2014",
-      subtitle: "State Board",
-      content: "Successfully completed my intermediate studies in 2014 from Velammal Matric Higher Secondary School, Chennai(India)",
+      heading: "Master of Science",
+      duration: "2025",
+      subtitle: "Athlone, Co. Westmeath, Ireland",
+      content: "Software Design with Artificial Intelligence in TUS: Midlands",
       className1: "mar-left",
       className2: "prt_about_learnbox_right"
     },
     {
-      heading: "Secondary Stage(10th)",
-      duration: "2012",
-      subtitle: "State Board",
-      content: "Successfully completed my high school studies in 2012 from Anna University, Chennai(India).",
+      heading: "Bachelor of Engineering",
+      duration: "2018",
+      subtitle: "Anna University, Chennai, India",
+      content: "Computer Science & Engineering",
       className1: "mar-right",
       className2: "prt_about_learnbox_left"
     }
+    // {
+    //   heading: "High School",
+    //   duration: "2014",
+    //   subtitle: "Anna University, Chennai, India",
+    //   content: "Computer Science",
+    //   className1: "mar-left",
+    //   className2: "prt_about_learnbox_right"
+    // }
     ];
 
   constructor() { }
