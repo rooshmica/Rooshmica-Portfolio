@@ -8,11 +8,13 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root',
 })
 export class GitHubApiService {
-  private readonly baseUrl = 'https://api.github.com'; 
-  private token = environment.githubToken;
+  private readonly baseUrl = 'https://api.github.com';
+  private token: string = '';
 
-  constructor(private http: HttpClient) {}
-
+  constructor(private http: HttpClient) {
+    // Retrieve GitHub token from window object or fallback to environment.ts
+    this.token = (window as any).VITE_GITHUB_TOKEN || environment.githubToken;
+  }
 
   // Fetch pinned repositories while excluding forked ones
   getUserPinnedRepositories(username: string): Observable<any[]> {
