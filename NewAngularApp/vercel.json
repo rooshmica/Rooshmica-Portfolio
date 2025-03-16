@@ -1,11 +1,30 @@
 {
+  "version": 2,
+  "env": {
+    "VITE_GITHUB_TOKEN": "@VITE_GITHUB_TOKEN"
+  },
+  "build": {
     "env": {
       "VITE_GITHUB_TOKEN": "@VITE_GITHUB_TOKEN"
-    },
-    "build": {
-      "env": {
-        "VITE_GITHUB_TOKEN": "@VITE_GITHUB_TOKEN"
+    }
+  },
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist/[YOUR-PROJECT-NAME]"
       }
     }
-  }
-  
+  ],
+  "routes": [
+    {
+      "src": "/(assets/.+)",
+      "dest": "/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}
