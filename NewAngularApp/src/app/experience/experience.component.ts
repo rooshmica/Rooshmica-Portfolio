@@ -19,7 +19,7 @@ export class ExperienceComponent implements OnInit {
         color: "#3781c2",
         companylogo: "../../../assets/images/Cognizant.png",
         date: "Dec 2023 – Sept 2024",
-        desc: "Full Stack Developer with ML Development",
+        desc: "Full Stack Developer with ML",
         descBullets: [
           "Developed a REST API using C# with .NET Core and Angular, integrated with Azure for cloud solutions. ",
           "Utilized NGRX for state management ensuring predictable state handling for a high-traffic app serving 1,000+ global users. ",
@@ -57,7 +57,7 @@ export class ExperienceComponent implements OnInit {
         color: "#ff9102",
         companylogo: "../../../assets/images/MTS.png",
         date: "Nov 2018 – Apr 2020",
-        desc: "Software Developer working with Salesforce and Dot Net development",
+        desc: "Software Developer working with Salesforce and Dot Net",
         descBullets: [
           "Developed REST APIs with C# and Angular, led Salesforce integration with OnBase using Microsoft technologies. ",
           "Led Salesforce Integration with OnBase Project, integrating Salesforce Classic and Lightning interfaces using Microsoft technologies.",

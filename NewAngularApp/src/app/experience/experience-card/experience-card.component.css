@@ -6,8 +6,12 @@
     box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px -15px;
     border-radius: 10px;
     border: 1px solid rgba(211, 211, 211, 0.397);
+    overflow: visible;
   }
-  
+  .subTitle experience-text-desc{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
   .experience-card:hover {
     box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px -10px;
   }
@@ -115,6 +119,7 @@
   .experience-text-details {
     padding: 1.5rem;
     margin-top: 2rem;
+    text-align: center;
   }
   
   /* Media Query */
@@ -124,7 +129,7 @@
       padding-top: 0.5rem;
       font-size: 22px;
     }
-  
+    
     .experience-text-company {
       font-size: 22px;
     }
@@ -167,18 +172,19 @@
   }
   
   
-.toggle-btn {
-  background-color: #3b82f6;
-  color: white;
-  border: none;
-  padding: 8px 12px;
-  margin-top: 10px;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 14px;
-  transition: background-color 0.3s ease;
-}
-
-.toggle-btn:hover {
-  background-color: #0056b3;  
-}
+  .toggle-btn {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    position: relative;
+  }
+  
+  .toggle-btn:hover {
+    background-color: #0056b3;
+  }
