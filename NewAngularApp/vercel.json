@@ -14,7 +14,7 @@
   ],
   "routes": [
     {
-      "src": "/(.*\\.js)",
+       "src": "/(assets/.+)",
       "headers": {
         "Content-Type": "application/javascript"
       },
