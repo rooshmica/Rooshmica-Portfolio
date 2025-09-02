@@ -14,20 +14,6 @@
   ],
   "routes": [
     {
-       "src": "/(assets/.+)",
-      "headers": {
-        "Content-Type": "application/javascript"
-      },
-      "dest": "/$1"
-    },
-    {
-      "src": "/(.*\\.(png|jpg|jpeg|gif|svg|ico))",
-      "headers": {
-        "Content-Type": "image/*"
-      },
-      "dest": "/$1"
-    },
-    {
       "src": "/(.*)",
       "dest": "/index.html"
     }
