@@ -1,8 +1,5 @@
 {
   "version": 2,
-  "env": {
-    "VITE_GITHUB_TOKEN": "${VITE_GITHUB_TOKEN}"
-  },
   "builds": [
     {
       "src": "package.json",
